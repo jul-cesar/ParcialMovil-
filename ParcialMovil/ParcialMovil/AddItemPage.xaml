@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ParcialMovil.AddItemPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Add a new Tip!">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image HeightRequest="300" Source="" />
+
+            <StackLayout>
+                <Button Text="Camara" />
+                <Button Text="Archivos" />
+            </StackLayout>
+
+            <Entry x:Name="TitleEntry" Placeholder="Title" />
+
+            <DatePicker x:Name="DatePicker" />
+
+            <Editor
+                x:Name="DescriptionEditor"
+                HeightRequest="100"
+                Placeholder="Description" />
+
+
+            <Button Clicked="Button_Clicked" Text="Save" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
