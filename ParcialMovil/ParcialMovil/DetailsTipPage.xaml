@@ -5,11 +5,41 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Detalles del Tip">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <FlexLayout
+            AlignItems="Center"
+            Direction="Column"
+            JustifyContent="Center">
 
-            <Label Text="{Binding Tips.Titulo}" />
-            <Label Text="{Binding Tips.Date}" />
-            <Label Text="{Binding Tips.Descripcion}" />
-        </StackLayout>
+            <Label Text="Titulo:" />
+
+            <Label
+                Margin="10"
+                FontSize="30"
+                Text="{Binding Tips.Titulo}"
+                TextColor="Black" />
+
+
+
+            <Label Text="Fecha de creacion:" />
+
+            <Label FontSize="30" Text="{Binding Tips.Date}" />
+
+            <Label Text="Descripcion:" />
+
+            <Label
+                Margin="10"
+                FontSize="16"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Tips.Descripcion}" />
+
+            <Label Text="Imagen:" />
+            <Image
+                HeightRequest="300"
+                Source="{Binding Tips.Foto}"
+                WidthRequest="300" />
+
+            <Button Clicked="Button_Clicked" Text="Editar este Tip" />
+        </FlexLayout>
+
     </ContentPage.Content>
 </ContentPage>

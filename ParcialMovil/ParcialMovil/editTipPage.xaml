@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="ParcialMovil.AddItemPage"
+    x:Class="ParcialMovil.editTipPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Add a new Tip!">
+    Title="Editar Tip">
     <ContentPage.Content>
         <StackLayout>
             <Image
@@ -12,10 +12,8 @@
                 Source="{Binding Foto}" />
 
             <StackLayout>
-                <Button Clicked="Button_Clicked1" Text="Toma una foto" />
-
-
-                <Button Clicked="Button_Clicked_1" Text="Elige una foto" />
+                <Button Clicked="Button_Clicked_1" Text="Toma una foto" />
+                <Button Clicked="Button_Clicked_2" Text="Elige una foto" />
             </StackLayout>
 
             <Entry x:Name="TitleEntry" Placeholder="Title" />
@@ -28,7 +26,7 @@
                 Placeholder="Description" />
 
 
-            <Button Clicked="Button_Clicked" Text="Agregar" />
+            <Button Clicked="Button_Clicked" Text="Editar" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
