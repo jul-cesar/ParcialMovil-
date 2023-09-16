@@ -22,7 +22,7 @@
             <SearchBar HorizontalOptions="FillAndExpand" Placeholder="Buscar..." />
             <Button
                 Margin="6"
-                BackgroundColor="#1291f2"
+                BackgroundColor="Red"
                 Clicked="Button_Clicked"
                 CornerRadius="50"
                 HorizontalOptions="EndAndExpand"
