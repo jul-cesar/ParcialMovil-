@@ -60,5 +60,23 @@ namespace ParcialMovil
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchText = e.NewTextValue;
+
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                cv.ItemsSource = App.TipsCollection;
+            }
+            else
+            {
+                var filteredTips = App.TipsCollection.Where(tip => tip.Titulo.Contains(searchText)).ToList();
+                cv.ItemsSource = filteredTips;
+            }
+        }
+
+
     }
+
 }
