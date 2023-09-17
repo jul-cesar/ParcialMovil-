@@ -21,6 +21,10 @@ namespace ParcialMovil
         {
             InitializeComponent();
             EditTips = tips;
+            TitleEntry.Text = EditTips.Titulo;
+            imageCamara.Source = this.EditTips.Foto;
+            DescriptionEditor.Text = EditTips.Descripcion;
+
         }
 
 
@@ -84,7 +88,10 @@ namespace ParcialMovil
             this.EditTips.Titulo = TitleEntry.Text;
             this.EditTips.Date = DatePicker.Date.ToString("dd/MM/yyyy");
             this.EditTips.Descripcion = DescriptionEditor.Text;
-            this.EditTips.Foto = miFoto != null ? miFoto.Path : null;
+            if (miFoto != null)
+            {
+                this.EditTips.Foto = miFoto.Path;
+            }
             await Navigation.PushAsync(new elementsView());
 
         }
