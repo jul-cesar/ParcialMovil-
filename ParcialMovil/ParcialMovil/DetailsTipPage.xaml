@@ -1,4 +1,5 @@
-﻿<ContentPage
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
     x:Class="ParcialMovil.DetailsTipPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -10,39 +11,40 @@
 
             <Label
                 FontSize="24"
-                Text="Titulo:"
+                Text="Título:"
                 TextColor="Black" />
 
             <Label
+                FontAttributes="Bold"
                 FontSize="30"
                 Text="{Binding Tips.Titulo}"
                 TextColor="Black" />
 
             <Label
                 FontSize="24"
-                Text="Fecha de creacion:"
+                Text="Fecha de Creación:"
                 TextColor="Black" />
 
             <Label
-                FontSize="30"
-                Text="{Binding Tips.Date}"
+                FontSize="20"
+                Text="{Binding Tips.Date, StringFormat='{0:dd/MM/yyyy HH:mm}'}"
                 TextColor="Black" />
 
             <Label
                 FontSize="24"
-                Text="Descripcion:"
+                Text="Descripción:"
                 TextColor="Black" />
 
             <Label
                 FontSize="16"
-                HorizontalTextAlignment="Center"
                 Text="{Binding Tips.Descripcion}"
                 TextColor="Black" />
 
-            <Label
-                FontSize="24"
-                Text="Imagen:"
-                TextColor="Black" />
+            <BoxView
+                Margin="0,10,0,10"
+                BackgroundColor="Gray"
+                HeightRequest="1"
+                HorizontalOptions="FillAndExpand" />
 
             <Image
                 Aspect="AspectFit"
