@@ -1,45 +1,65 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
+﻿<ContentPage
     x:Class="ParcialMovil.DetailsTipPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Detalles del Tip">
-    <ContentPage.Content>
-        <FlexLayout
-            AlignItems="Center"
-            Direction="Column"
-            JustifyContent="Center">
+    Title="Detalles del Tip"
+    BackgroundColor="#F0F0F0">
 
-            <Label Text="Titulo:" />
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="10">
 
             <Label
-                Margin="10"
+                FontSize="24"
+                Text="Titulo:"
+                TextColor="Black" />
+
+            <Label
                 FontSize="30"
                 Text="{Binding Tips.Titulo}"
                 TextColor="Black" />
 
-
-
-            <Label Text="Fecha de creacion:" />
-
-            <Label FontSize="30" Text="{Binding Tips.Date}" />
-
-            <Label Text="Descripcion:" />
+            <Label
+                FontSize="24"
+                Text="Fecha de creacion:"
+                TextColor="Black" />
 
             <Label
-                Margin="10"
+                FontSize="30"
+                Text="{Binding Tips.Date}"
+                TextColor="Black" />
+
+            <Label
+                FontSize="24"
+                Text="Descripcion:"
+                TextColor="Black" />
+
+            <Label
                 FontSize="16"
                 HorizontalTextAlignment="Center"
-                Text="{Binding Tips.Descripcion}" />
+                Text="{Binding Tips.Descripcion}"
+                TextColor="Black" />
 
-            <Label Text="Imagen:" />
+            <Label
+                FontSize="24"
+                Text="Imagen:"
+                TextColor="Black" />
+
             <Image
+                Aspect="AspectFit"
                 HeightRequest="300"
                 Source="{Binding Tips.Foto}"
                 WidthRequest="300" />
 
-            <Button Clicked="editarTipActual" Text="Editar este Tip" />
-        </FlexLayout>
+            <Button
+                Margin="0,20,0,0"
+                BackgroundColor="#007BFF"
+                Clicked="editarTipActual"
+                CornerRadius="5"
+                FontSize="20"
+                HeightRequest="50"
+                Text="Editar este Tip"
+                TextColor="White" />
 
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -71,30 +72,32 @@ namespace ParcialMovil
 
             {
                 isFilterApplied = true;
-                filteredTips = App.TipsCollection.Where(tip => tip.Titulo.ToLower().Contains(searchText)).ToList();
+                filteredTips = App.TipsCollection.Where(tip => tip.Titulo.ToLower().Normalize(NormalizationForm.FormD).Contains((searchText.ToLower()))).ToList();
                 cv.ItemsSource = filteredTips;
               
             }
         }
 
-        private void borrarTip(object sender, EventArgs e)
+        private async void borrarTip(object sender, EventArgs e)
         {
-
-
             var button = (Button)sender;
             var item = (TipsModel)button.BindingContext;
-            App.TipsCollection.Remove(item);
 
-            cv.ItemsSource = App.TipsCollection;
+            bool isUserSure = await DisplayAlert("Confirmar", "¿Está seguro de que quiere borrar este elemento?", "Sí", "No");
 
-            if (isFilterApplied)
+            if (isUserSure)
             {
-               
-                filteredTips.Remove(item);
-                cv.ItemsSource = filteredTips;
-                NotifyPropertyChanged();
-            }
+                App.TipsCollection.Remove(item);
+                cv.ItemsSource = App.TipsCollection;
 
+
+                if (isFilterApplied)
+                {
+                    filteredTips.Remove(item);
+                    cv.ItemsSource = filteredTips;
+                    NotifyPropertyChanged();
+                }
+            }
         }
 
 

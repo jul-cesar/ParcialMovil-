@@ -3,29 +3,55 @@
     x:Class="ParcialMovil.AddItemPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Add a new Tip!">
+    Title="Add a New Tip">
+
     <ContentPage.Content>
-        <StackLayout>
-            <Image x:Name="imageCamara" HeightRequest="300" />
+        <StackLayout Padding="20" Spacing="20">
 
-            <StackLayout>
-                <Button Clicked="tomarFoto" Text="Toma una foto" />
+            <Image x:Name="imageCamara" HeightRequest="200" />
 
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Button
+                    BackgroundColor="#007BFF"
+                    Clicked="tomarFoto"
+                    CornerRadius="5"
+                    HeightRequest="40"
+                    Text="Tomar una foto"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
 
-                <Button Clicked="elegirFoto" Text="Elige una foto" />
+                <Button
+                    BackgroundColor="#007BFF"
+                    Clicked="elegirFoto"
+                    CornerRadius="5"
+                    HeightRequest="40"
+                    Text="Seleccionar una foto"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
             </StackLayout>
 
-            <Entry x:Name="TitleEntry" Placeholder="Title" />
+            <Entry
+                x:Name="TitleEntry"
+                FontSize="18"
+                Placeholder="Titulo" />
 
-            <DatePicker x:Name="DatePicker" />
+            <DatePicker x:Name="DatePicker" FontSize="18" />
 
             <Editor
                 x:Name="DescriptionEditor"
+                FontSize="16"
                 HeightRequest="100"
-                Placeholder="Description" />
+                Placeholder="Descripcion" />
 
-
-            <Button Clicked="agregar" Text="Agregar" />
+            <Button
+                BackgroundColor="#007BFF"
+                Clicked="agregar"
+                CornerRadius="5"
+                FontSize="18"
+                HeightRequest="50"
+                Text="Agregar"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
