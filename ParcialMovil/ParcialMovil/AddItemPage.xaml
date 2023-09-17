@@ -6,16 +6,13 @@
     Title="Add a new Tip!">
     <ContentPage.Content>
         <StackLayout>
-            <Image
-                x:Name="imageCamara"
-                HeightRequest="300"
-                Source="{Binding Foto}" />
+            <Image x:Name="imageCamara" HeightRequest="300" />
 
             <StackLayout>
-                <Button Clicked="Button_Clicked1" Text="Toma una foto" />
+                <Button Clicked="tomarFoto" Text="Toma una foto" />
 
 
-                <Button Clicked="Button_Clicked_1" Text="Elige una foto" />
+                <Button Clicked="elegirFoto" Text="Elige una foto" />
             </StackLayout>
 
             <Entry x:Name="TitleEntry" Placeholder="Title" />
@@ -28,7 +25,7 @@
                 Placeholder="Description" />
 
 
-            <Button Clicked="Button_Clicked" Text="Agregar" />
+            <Button Clicked="agregar" Text="Agregar" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

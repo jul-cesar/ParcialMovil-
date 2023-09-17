@@ -12,8 +12,8 @@
                 Source="{Binding Foto}" />
 
             <StackLayout>
-                <Button Clicked="Button_Clicked_1" Text="Toma una foto" />
-                <Button Clicked="Button_Clicked_2" Text="Elige una foto" />
+                <Button Clicked="tomarFoto" Text="Toma una foto" />
+                <Button Clicked="elegirFoto" Text="Elige una foto" />
             </StackLayout>
 
             <Entry x:Name="TitleEntry" Placeholder="Title" />
@@ -26,7 +26,7 @@
                 Placeholder="Description" />
 
 
-            <Button Clicked="Button_Clicked" Text="Editar" />
+            <Button Clicked="guardarEdicion" Text="Editar" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

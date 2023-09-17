@@ -21,19 +21,16 @@ namespace ParcialMovil
         {
             InitializeComponent();
 
-
- 
-
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void agregarTip(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddItemPage());
 
         }
 
 
-        private void Button_Clicked_2(object sender, EventArgs e)
+        private void borrarTip(object sender, EventArgs e)
         {
             var button = (Button)sender;
             var item = (TipsModel)button.BindingContext;
@@ -41,7 +38,7 @@ namespace ParcialMovil
 
         }
 
-        private async void Button_Clicked_3(object sender, EventArgs e)
+        private async void verDetallesTip(object sender, EventArgs e)
         {
 
 

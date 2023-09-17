@@ -22,7 +22,7 @@ namespace ParcialMovil
             InitializeComponent();
         }
 
-        private async void Button_Clicked1(object sender, EventArgs e)
+        private async void tomarFoto(object sender, EventArgs e)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace ParcialMovil
         }
 
 
-        private async void Button_Clicked_1(object sender, EventArgs e)
+        private async void elegirFoto(object sender, EventArgs e)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace ParcialMovil
                 await DisplayAlert("Error", ex.Message, "OK");
             }
         }
-        private void Button_Clicked(object sender, EventArgs e)
+        private void agregar(object sender, EventArgs e)
         {
             TipsModel newItem = new TipsModel
             {

@@ -38,7 +38,7 @@
                 Source="{Binding Tips.Foto}"
                 WidthRequest="300" />
 
-            <Button Clicked="Button_Clicked" Text="Editar este Tip" />
+            <Button Clicked="editarTipActual" Text="Editar este Tip" />
         </FlexLayout>
 
     </ContentPage.Content>
